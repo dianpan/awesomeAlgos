@@ -45,7 +45,7 @@ class LinkedList
     end
   end
 
-  public def p
+  def p
     if @head == nil
       puts "HEAD IS NIL"
     else
