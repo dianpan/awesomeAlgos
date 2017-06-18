@@ -13,13 +13,16 @@ class Link
   end
 
   def remove
-    # optional but useful, connects previous link to next link
-    # and removes self from list.
   end
+
 end
 
 class LinkedList
   def initialize
+    @head = Link.new
+    @tail = Link.new
+    @head.next = @tail
+    @tail.prev = @head
   end
 
   def [](i)
@@ -28,12 +31,15 @@ class LinkedList
   end
 
   def first
+    empty? ? nil : @head.next
   end
 
   def last
+    empty? ? nil : @tail.prev
   end
 
   def empty?
+    # @head.next == @tail
   end
 
   def get(key)

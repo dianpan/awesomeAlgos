@@ -68,7 +68,7 @@ class LinkedList
 
     new_link
   end
-  
+
   def update(key, val)
     each do |link|
       if link.key == key
